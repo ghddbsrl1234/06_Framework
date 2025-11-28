@@ -9,6 +9,10 @@
   </style>
 </head>
 <body>
+  <th:block th:replace="~{fragments/header}"></th:block>
+
+  <th:block th:replace="~{fragments/footer :: footer2}"></th:block>
+
   <h1>타임리프 예제 1</h1>
   <pre>
     Spring EL(스프링 표현 언어)
@@ -122,6 +126,8 @@
     </tr>
   </tbody>
  </table>
+
+ <th:block th:replace="~{fragments/footer :: footer1}"></th:block>
 
 </body>
 </html>

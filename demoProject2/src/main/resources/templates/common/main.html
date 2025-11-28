@@ -6,6 +6,9 @@
   <title>thymeleaf</title>
 </head>
 <body>
+  <!-- templates 폴더 기준-->
+  <th:block th:replace="~{fragments/header}"></th:block>
+
   <h1>thymeleaf</h1>
 
   <h3>1. 템플릿 엔진</h3>
@@ -53,6 +56,8 @@
      <a href="/example/ex5">타임리프 예제5</a>
    </li>
  </ol>
+
+  <th:block th:replace="~{fragments/footer :: footer1}"></th:block>
 
 </body>
 </html>
