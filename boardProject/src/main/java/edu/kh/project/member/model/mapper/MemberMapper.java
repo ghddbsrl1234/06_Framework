@@ -13,4 +13,18 @@ public interface MemberMapper {
 	 */
 	Member login(String memberEmail) throws Exception;
 
+	/** 이메일 중복 검사 SQL 실행
+	 * @param memberEmail
+	 * @return count
+	 */
+	int checkEmail(String memberEmail);
+
+	int checkNickname(String memberNickname);
+
+	/** 회원가입 SQL 실행
+	 * @param inputMember
+	 * @return
+	 */
+	int signup(Member inputMember);
+
 }
