@@ -14,17 +14,14 @@ public class MainController {
 		// 접두사, 접미사 제외
 		// 접두사 : classpath:/templates/
 		// 접미사 : .html
-		return "common/main"; // forward
+		return "common/main";
 	}
 	
-	// LoginFilter 에서 로그인하지 않았을때 리다이렉트로 요청
+	// LoginFilter에서 로그인하지 않았을 때 발생하는 redirect 요청
 	@GetMapping("loginError")
 	public String loginError(RedirectAttributes ra) {
-		ra.addFlashAttribute("message", "로그인 후 이용해주세요~");
+		ra.addFlashAttribute("message", "로그인 후 이용바랍니다!");
 		return "redirect:/";
 	}
-	
-	
-	
 	
 }
